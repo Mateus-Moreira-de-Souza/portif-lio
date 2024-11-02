@@ -1,0 +1,250 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #e7e7e7;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #b3b3b3;
+    position: sticky;
+    top: 0;
+}
+
+.perfil {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.imagem-perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.perfil h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.perfil h3 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #333;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.perfil p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Main content */
+.main {
+    width: 75%;
+    padding: 40px;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuste da imagem na seção de descrição-imagem */
+.descricao-imagem {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cfcfcf;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.descricao {
+    width: 58%; /* Ajusta a largura do texto */
+    margin-right: 20px; /* Espaçamento mais próximo da imagem */
+}
+
+.descricao h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.descricao p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify; /* Alinha o texto para melhor estética */
+}
+
+.imagem img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+    width: 230px; /* Define uma largura fixa para evitar que a imagem fique muito grande */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Links */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.link-item {
+    background-color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    width: 22%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none; /* Remove underline dos links */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+.link-item:hover {
+    background-color: #bfbfbf;
+    transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 2px solid #b3b3b3;
+    }
+
+    .main {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .descricao-imagem {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .descricao {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link-item {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .descricao h1 {
+        font-size: 18px;
+    }
+
+    .descricao p {
+        font-size: 14px;
+    }
+
+    .link-item {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para o botão de alternância de modo */
+.dark-mode-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-btn:hover {
+    background-color: #555;
+}
+
+/* Estilos para o modo escuro */
+.dark-mode {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.dark-mode .sidebar {
+    background-color: #444;
+    border-right: 2px solid #666;
+}
+
+.dark-mode .main {
+    background-color: #555;
+}
+
+.dark-mode .descricao-imagem {
+    background-color: #666;
+}
+
+.dark-mode .link-item {
+    background-color: #777;
+}
+
+.dark-mode .link-item:hover {
+    background-color: #888;
+}
+
